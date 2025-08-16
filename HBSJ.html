@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Feliz Cumpleaños</title>
+
+    <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon">
+    <style>
+        
+        body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #FAE9FC, #E999F0, #f6befb, #ca7ed1);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+        text-align: center;
+        }
+
+        @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+        }
+
+        .container {
+        padding: 2rem;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        max-width: 90%;
+        width: 300px;
+        }
+
+        .container h1 {
+
+            margin-top: 40px;
+
+        }
+
+
+        h1 {
+        font-size: 3rem;
+        margin: 0;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+        }
+
+
+        .maps {
+        margin-top: 2rem;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .maps-info {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        
+        }
+
+        .maps .maps-info p {
+        margin-top: .5rem;
+        font-size: 1rem;
+        color: #42a1c1;
+        color: #FAE9FC;
+        }   
+
+        .maps iframe {
+        width: 100%;
+        height: 200px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+
+
+        .balloons {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+        }
+
+        .balloon {
+        position: absolute;
+        width: 20px;
+        height: 30px;
+        background: #ff5c7c;
+        border-radius: 50%;
+        bottom: -50px;
+        animation: float 8s infinite ease-in-out;
+        }
+
+        .balloon::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.1);
+        bottom: -40px;
+        left: 9px;
+        }
+
+        .balloon:nth-child(1) { left: 10%; background: #ff5c7c; animation-delay: 0s; }
+        .balloon:nth-child(2) { left: 20%; background: #ffcc00; animation-delay: 2s; }
+        .balloon:nth-child(3) { left: 30%; background: #4facfe; animation-delay: 4s; }
+        .balloon:nth-child(4) { left: 40%; background: #a18cd1; animation-delay: 6s; }
+        .balloon:nth-child(5) { left: 50%; background: #fbc2eb; animation-delay: 1s; }
+        .balloon:nth-child(6) { left: 60%; background: #667eea; animation-delay: 3s; }
+        .balloon:nth-child(7) { left: 70%; background: #f093fb; animation-delay: 5s; }
+        .balloon:nth-child(8) { left: 80%; background: #43e97b; animation-delay: 7s; }
+        .balloon:nth-child(9) { left: 90%; background: #fa7e1e; animation-delay: 0.5s; }
+
+        @keyframes float {
+        0% { transform: translateY(0) rotate(0deg); }
+        100% { transform: translateY(-100vh) rotate(360deg); }
+        }
+    </style>
+    </head>
+
+
+    <body>
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <div class="container">
+
+         <canvas id="confetti-canvas"></canvas>
+        <h1>🧖🏻‍♀️🧘🏻‍♀️ Tiempo de conexión!</h1>
+        <p>A veces es necesario hacer una pausa para renovar nuestras energias. </p>
+        <div class="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0477778088734!2d-75.59596130777435!3d6.257436816747092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44290d19109edd%3A0xecf1cddb948bcd17!2sCra.%2078%20%23%2047-78%2C%20Laureles%20-%20Estadio%2C%20Medell%C3%ADn%2C%20Laureles%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1755274410340!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            <div class="maps-info">
+                <p>🎂 SPA</p>
+                <p>⏰ 10:30 p.m. Domingo 17 de Agosto | 📍 SPA, Medellín</p>
+                
+                
+                <p>👙🩴 Vestido de Baño, toalla, gorro y chanclas </p>
+                <p>🎁 Trae todas las intenciones de reencontrarte con las cosas que amas</p>
+                <p>👱🏻‍♀️ Jaqueline Villa</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const container = document.querySelector('.container');
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Set canvas size to match container
+        function resizeCanvas() {
+            canvas.width = container.clientWidth;
+            canvas.height = container.clientHeight;
+            // Position canvas absolutely inside container
+            canvas.style.position = 'absolute';
+            canvas.style.top = 0;
+            canvas.style.left = 0;
+            canvas.style.pointerEvents = 'none';
+            canvas.style.zIndex = 2;
+        }
+
+        // Make container position:relative for absolute canvas
+        container.style.position = 'relative';
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Confetti properties
+        const colors = ['#ff5c7c', '#ffcc00', '#4facfe', '#a18cd1', '#fbc2eb', '#667eea', '#f093fb', '#43e97b', '#fa7e1e'];
+        const confettiCount = 60;
+        const confettis = [];
+
+        function randomBetween(a, b) {
+            return a + Math.random() * (b - a);
+        }
+
+        for (let i = 0; i < confettiCount; i++) {
+            confettis.push({
+                x: randomBetween(0, canvas.width),
+                y: randomBetween(-canvas.height, 0),
+                r: randomBetween(5, 10),
+                d: randomBetween(2, 6),
+                color: colors[Math.floor(Math.random() * colors.length)],
+                tilt: randomBetween(-10, 10),
+                tiltAngleIncremental: randomBetween(0.05, 0.12),
+                tiltAngle: 0
+            });
+        }
+
+        function drawConfetti() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            confettis.forEach(function(c) {
+                ctx.beginPath();
+                ctx.lineWidth = c.d;
+                ctx.strokeStyle = c.color;
+                ctx.moveTo(c.x + c.tilt + c.r / 3, c.y);
+                ctx.lineTo(c.x + c.tilt, c.y + c.r);
+                ctx.stroke();
+            });
+            updateConfetti();
+            requestAnimationFrame(drawConfetti);
+        }
+
+        function updateConfetti() {
+            for (let i = 0; i < confettiCount; i++) {
+                let c = confettis[i];
+                c.y += (Math.cos(c.d) + 2 + c.d / 2) * 0.8;
+                c.x += Math.sin(0.5) * 2;
+                c.tiltAngle += c.tiltAngleIncremental;
+                c.tilt = Math.sin(c.tiltAngle) * 15;
+
+                // Respawn confetti at top if it falls below container
+                if (c.y > canvas.height) {
+                    c.x = randomBetween(0, canvas.width);
+                    c.y = randomBetween(-20, 0);
+                    c.tilt = randomBetween(-10, 10);
+                }
+            }
+        }
+
+        drawConfetti();
+    });
+    </script>
+    </body>
+</html>
